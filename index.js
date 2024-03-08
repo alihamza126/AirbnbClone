@@ -9,11 +9,13 @@ const ExpressError = require('./utils/ExpressError.js');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
 const flash = require('connect-flash');
-const PORT = process.env.PORT || 5000;
 
 if(process.env.NODE_ENV!='production'){
     require('dotenv').config();
 }
+const PORT = process.env.PORT || 5000;
+
+
 // authenticate
 const passport=require('passport')
 const LocalStrategy=require('passport-local')
@@ -50,7 +52,7 @@ passport.deserializeUser(userModel.deserializeUser())
 // database connection
 const main = async () => {
     try {
-        mongoose.connect("mongodb://127.0.0.1:27017/wonderlust").then(() => {
+        await mongoose.connect(process.env.MONGO_DB).then(() => {
             console.log('its okkkk')
         });
     } catch (error) {
