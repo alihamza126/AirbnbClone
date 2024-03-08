@@ -1,0 +1,23 @@
+<% layout('/layouts/boilerplate') -%>
+<body >
+   <div class="row row-md-3 px-2 mt-3">
+      <% data.map((e)=>{ %>
+         <a href="/listning/<%=e._id%>"  class="col-lg-3  col-12 mb-2 text-decoration-none">
+            <div class="card rounded-2 overflow-hidden">
+               <img src="<%= e.image.url%>" class="card-img-top rounded-3" alt="listning image" style="width: 20rem;max-height: 12rem;"/>
+               <!-- <img src="img/test.jpg" class="card-img-top rounded-3" alt="listning image" style="width: 100%"/> -->
+               <div class="card-img-overlay">
+               </div>
+               
+               <div class="card-body">
+                  <p class="card-text">
+                       <b> <%= e.title %></b>
+                       <br>
+                       <p><%= e.price.toLocaleString("pkr") %> pkr /night</p>
+                  </p>
+               </div>
+            </div>
+         </a>
+         <% }) %>
+   </div>
+</body>

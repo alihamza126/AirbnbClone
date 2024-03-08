@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Wonderlust</title>
+      <link rel="stylesheet" href="/css/style.css" />
+      <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="/css/starability-all.css" />
+      <link rel="shortcut icon" href="/img/compass.png" type="image/x-icon" />
+      <!-- //mapbox -->
+      <link
+         href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css"
+         rel="stylesheet" />
+      <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+         }
+         #map {
+            position: relative;
+            height: 350px;
+            width: 100%;
+         }
+      
+      </style>
+   </head>
+   <body class="">
+      <%- include('../includes/navbar.ejs') %>
+      <div class="" style="overflow: hidden">
+         <%- include('../includes/flash.ejs') %> <%- body -%>
+      </div>
+      <%- include('../includes/footer.ejs') %>
+
+      <script src="/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/js/script.js"></script>
+   </body>
+</html>

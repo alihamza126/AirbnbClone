@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(215, 187, 252);
+}
+.nav-link{
+    color: #1b1a1a !important;
+    font-weight: 600 !important;
+}
+
+/* footer styling */
+.footer{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    background-color: bisque;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer> .social-links img{
+    width: 30px;
+
+}
+
+.footer> .brand{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b1a1a;
+}
+.footer > .pages a{
+    padding: 0 .41rem;
+    /* text-decoration: none; */
+    color:rgb(45, 111, 138);
+    gap: 1rem;
+}
+/* card overlay */
+.card-img-overlay{
+    opacity:0 ;
+}
+.card-img-overlay:hover{
+    opacity: 99;
+    width: 100%;
+    height: 100%;
+    background-color: #fffbfb17;
+}
+.border-none{
+    border: none !important;
+    outline: none;
+}
+
+.card-height{
+    min-height: 12rem;
+}
